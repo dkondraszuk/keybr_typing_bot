@@ -6,6 +6,7 @@ from selenium import webdriver
 from urls import LOGGED_IN_URL, FIREFOX_EXE_PATH
 from pages.account_page import AccountPage
 from pages.practice_page import PracticePage
+from keypress_emulator import Keyboard
 
 # options = Options()
 # options.headless = True
@@ -30,7 +31,17 @@ practice.close_popup_window()
 input_items = practice.find_text_input_items()
 input_items_text = [' ' if item.text == '␣' else item.text for item in input_items]
 input_text = ''.join(input_items_text)
-print(input_text)
+
+# click to activate:
+practice.click_to_activate()
+
+# start typing:
+keyboard = Keyboard()
+keyboard.type_sentence(input_text)
 
 time.sleep(5)  # fixme: only for testing
 driver.quit()
+
+
+# todo: Implement separate functions for the above functionality.
+# todo: Implement function to change settings (extended lessons and alphabet)
