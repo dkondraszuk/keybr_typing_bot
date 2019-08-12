@@ -1,0 +1,2 @@
+FIREFOX = 'Firefox'
+CHROME = 'Chrome'
