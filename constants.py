@@ -1,2 +1,0 @@
-FIREFOX = 'Firefox'
-CHROME = 'Chrome'
