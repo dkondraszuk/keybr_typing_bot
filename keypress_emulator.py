@@ -1,5 +1,5 @@
-import time
 import random
+import time
 
 from pynput.keyboard import Controller
 
@@ -11,7 +11,7 @@ class Keyboard:
 
     @staticmethod
     def _generate_typing_delay():
-        delay = random.uniform(0.06, 0.12)
+        delay = random.uniform(0.06, 0.10)
         return round(delay, 3)
 
     def type_sentence(self, sentence):

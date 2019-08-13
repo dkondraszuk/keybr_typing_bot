@@ -20,6 +20,14 @@ class SettingsPage:
         move.click_and_hold(slider).move_by_offset(288, 0).release().perform()
         print('Lesson length extended!')
 
+    def enable_capital_letters(self):
+        self._driver.find_element_by_xpath(sc.CAPITAL_LETTERS).click()
+        print('Capital letters enabled!')
+
+    def enable_punctuation_characters(self):
+        self._driver.find_element_by_xpath(sc.PUNCTUATION).click()
+        print('Punctuation characters enabled!')
+
     def save_settings(self):
         self._driver.find_element_by_xpath(sc.DONE_BUTTON).click()
         print('Settings saved!')

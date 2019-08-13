@@ -35,14 +35,15 @@ class TypingBot:
         self._practice.go_to_settings()
         self._settings.extend_alphabet()
         self._settings.extend_lesson_length()
+        self._settings.enable_capital_letters()
+        self._settings.enable_punctuation_characters()
         self._settings.save_settings()
 
     def practice_for_repetitions(self, practice_reps=1):
-        # self._practice.click_to_activate()
         for i in range(practice_reps):
             input_text = self._get_text_input_items()
             self._keyboard.type_sentence(input_text)
-            time.sleep(1)
+            time.sleep(timers.WAIT_FOR_NEXT_PRACTICE)
 
     def cleanup(self):
         self._driver.quit()
