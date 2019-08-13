@@ -2,8 +2,7 @@ import time
 
 from selenium.webdriver import Firefox
 
-import urls
-from constants import timers
+from constants import timers, urls
 from keypress_emulator import Keyboard
 from pages.account_page import AccountPage
 from pages.practice_page import PracticePage
