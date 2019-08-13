@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 from constants import practice_constants as pc
+from constants import timers
 
 
 class PracticePage:
@@ -17,7 +18,7 @@ class PracticePage:
 
     def close_popup_window(self):
         try:
-            wait = WebDriverWait(self._driver, 15)
+            wait = WebDriverWait(self._driver, timers.WAIT_FOR_POPUP)
             wait.until(expected_conditions.visibility_of_element_located((By.CLASS_NAME, pc.CLOSE_POPUP)))
         except TimeoutException:
             print('No pop-up window found.')

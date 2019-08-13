@@ -10,7 +10,16 @@ class SettingsPage:
 
     def extend_alphabet(self):
         slider = self._driver.find_element_by_xpath(sc.ALPHABET_SLIDER)
-        # slider = self._driver.find_element_by_css_selector(sc.ALPHABET_SLIDER)
         move = ActionChains(self._driver)
         move.click_and_hold(slider).move_by_offset(288, 0).release().perform()
         print('Alphabet extended!')
+
+    def extend_lesson_length(self):
+        slider = self._driver.find_element_by_xpath(sc.LESSON_LENGTH_SLIDER)
+        move = ActionChains(self._driver)
+        move.click_and_hold(slider).move_by_offset(288, 0).release().perform()
+        print('Lesson length extended!')
+
+    def save_settings(self):
+        self._driver.find_element_by_xpath(sc.DONE_BUTTON).click()
+        print('Settings saved!')
