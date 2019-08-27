@@ -12,8 +12,8 @@ With this typing bot, you will be able to get to the 1st place in just a few min
 pip install -r requirements.txt
 
 ## Required:
-python3
-Mozilla Firefox Web Browser
+* python3
+* Mozilla Firefox
 
 ## How to use
 * Create an accout on: keybr.com
