@@ -1,6 +1,6 @@
-from typing_bot import TypingBot
 import argparse
 
+from typing_bot import TypingBot
 
 parser = argparse.ArgumentParser(description='Script that runs typing bot')
 parser.add_argument('-r', '--repeat', help='specify how many times bot should repeat typing practice', type=int)
