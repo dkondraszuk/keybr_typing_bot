@@ -1,6 +1,7 @@
 # keybr_typing_bot
 Fun project created in Python + Selenium Webdriver.\
-The goal of the project was to win High Scores table from keybr.com
+The goal of the project was to win High Scores table on keybr.com:\
+*https://www.keybr.com/high-scores*
 
 keybr.com is an online typing practice tool. It also keeps statistics about individual users that are using it.
 
@@ -11,7 +12,7 @@ With this typing bot, you will be able to get to the 1st place in just a few min
 ## Install requirements:
 pip install -r requirements.txt
 
-## Required:
+## Other requirements:
 * python3
 * Mozilla Firefox
 
